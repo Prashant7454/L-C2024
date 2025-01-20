@@ -1,0 +1,55 @@
+buildCity(){
+	makeRoad();
+	makePlote();
+	makeBulding();
+	makeHouse();
+	makePark();
+	makeCarParking();
+	makeWaterTank();
+	makeWaterSupply();
+	makeMarket();	
+}
+makePlote(){
+	material;
+}
+
+makeBulding(){
+	material;
+	electricity;
+	makeWaterSupply();
+}
+
+makeHouse(){
+	material;
+	electricity;
+	makeWaterSupply();
+}
+
+makePark(){
+	electricity;
+	tree;
+}
+
+makeCarParkings(){
+	material;
+	electricity;
+}
+
+makeWaterSupply(){
+	material;
+}
+
+makeWaterTank(){
+	material;
+	water;
+}
+
+makeRoad(){
+	material;
+}
+
+makeMarket(){
+	material;
+	electricity;
+	makeWaterSupply();
+}
