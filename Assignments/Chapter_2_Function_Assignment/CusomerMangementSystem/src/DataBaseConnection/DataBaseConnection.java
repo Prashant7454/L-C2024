@@ -9,14 +9,11 @@ public class DataBaseConnection {
     private static final String USER = "root";
     private static final String PASSWORD = "root";
 
-    // Method to get database connection
     public static Connection getDBConnection() {
         Connection connection = null;
         try {
-            // Load MySQL JDBC Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Establish connection
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             System.out.println("Database connected successfully!");
         } catch (ClassNotFoundException e) {
