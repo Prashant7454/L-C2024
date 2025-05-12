@@ -4,7 +4,6 @@ import main.api.GeocodeApiClient;
 import main.parser.GeocodeParser;
 import main.model.Coordinates;
 
-
 public class GeocodeService {
     private final GeocodeApiClient apiClient;
     private final GeocodeParser parser;

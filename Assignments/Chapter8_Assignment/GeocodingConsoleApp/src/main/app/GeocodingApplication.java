@@ -2,7 +2,6 @@ package main.app;
 
 import main.model.Coordinates;
 import main.service.GeocodeService;
-
 import java.util.Scanner;
 
 public class GeocodingApplication {

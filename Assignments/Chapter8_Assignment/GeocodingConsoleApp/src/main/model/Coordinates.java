@@ -1,6 +1,5 @@
 package main.model;
 
-
 public class Coordinates {
     private final String latitude;
     private final String longitude;

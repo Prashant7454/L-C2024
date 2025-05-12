@@ -5,7 +5,6 @@ import org.json.JSONObject;
 import main.model.Coordinates;
 
 public class GeocodeParser {
-
     public Coordinates parse(String json) {
         JSONArray results = new JSONArray(json);
         if (results.isEmpty()) {

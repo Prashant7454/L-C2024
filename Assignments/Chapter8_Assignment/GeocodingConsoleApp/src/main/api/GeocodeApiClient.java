@@ -6,7 +6,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-
 public class GeocodeApiClient {
     private static final String BASE_URL = "https://geocode.maps.co/search?q=";
 
