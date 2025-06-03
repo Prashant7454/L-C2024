@@ -6,13 +6,19 @@ public class DivisorCounter {
         if (num <= 0) {
             throw new IllegalArgumentException("Input must be a positive integer");
         }
-        return 0;
+        return num % i == 0;
     }
 
     public int countMatchingDivisors(int n) {
         if (n <= 0) {
             throw new IllegalArgumentException("Input must be a positive integer");
         }
-        return 0;
+        int result = 0;
+        for (int i = 1; i < n; i++) {
+            if (isDivisor(n,i) && isDivisor(n + 1,i)) {
+                result++;
+            }
+        }
+        return result;
     }
 }
