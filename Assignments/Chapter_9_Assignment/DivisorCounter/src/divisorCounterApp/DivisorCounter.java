@@ -2,20 +2,35 @@ package divisorCounterApp;
 
 public class DivisorCounter {
 
-    public boolean isDivisor(int num, int i) {
-        if (num <= 0) {
+    public boolean isDivisor(int number, int i) {
+        if (number <= 0) {
             throw new IllegalArgumentException("Input must be a positive integer");
         }
-        return num % i == 0;
+        return number % i == 0;
     }
 
-    public int countMatchingDivisors(int n) {
-        if (n <= 0) {
+    public int getCountOfSameNumberOfPositiveDivisor(int number){
+        if (number <= 0) {
+            throw new IllegalArgumentException("Input must be a positive integer");
+        }
+        int count = 0;
+        for(int i = 1;i<number;i++){
+            int firstCount = countDivisors(i);
+            int secondCount = countDivisors(i+1);
+            if(firstCount==secondCount){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public int countDivisors(int number) {
+        if (number <= 0) {
             throw new IllegalArgumentException("Input must be a positive integer");
         }
         int result = 0;
-        for (int i = 1; i < n; i++) {
-            if (isDivisor(n,i) && isDivisor(n + 1,i)) {
+        for (int i = 1; i < number; i++) {
+            if (isDivisor(number,i)) {
                 result++;
             }
         }
