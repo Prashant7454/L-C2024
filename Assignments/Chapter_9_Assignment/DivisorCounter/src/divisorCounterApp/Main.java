@@ -9,13 +9,17 @@ public class Main {
         int testCasesNumber = scanner.nextInt();
 
         int[] testCases = new int[testCasesNumber];
-        for(int i = 0; i < testCasesNumber; i++){
-            testCases[i] = scanner.nextInt();
+        for(int index = 0; index < testCasesNumber; index++){
+            testCases[index] = scanner.nextInt();
         }
 
         DivisorCounter divisorCounter = new DivisorCounter();
-        for(int i = 0; i < testCasesNumber; i++){
-            System.out.println(divisorCounter.getCountOfSameNumberOfPositiveDivisor(testCases[i]));
+        for(int index = 0; index < testCasesNumber; index++){
+            try {
+                System.out.println(divisorCounter.getCountOfSameNumberOfPositiveDivisor(testCases[index]));
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
         }
     }
 }

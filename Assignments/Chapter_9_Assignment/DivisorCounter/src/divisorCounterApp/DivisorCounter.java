@@ -2,11 +2,11 @@ package divisorCounterApp;
 
 public class DivisorCounter {
 
-    public boolean isDivisor(int number, int i) {
+    public boolean isDivisor(int number, int divisor) {
         if (number <= 0) {
             throw new IllegalArgumentException("Input must be a positive integer");
         }
-        return number % i == 0;
+        return number % divisor == 0;
     }
 
     public int getCountOfSameNumberOfPositiveDivisor(int number){
@@ -14,10 +14,10 @@ public class DivisorCounter {
             throw new IllegalArgumentException("Input must be a positive integer");
         }
         int count = 0;
-        for(int i = 1;i<number;i++){
-            int firstCount = countDivisors(i);
-            int secondCount = countDivisors(i+1);
-            if(firstCount==secondCount){
+        for(int currentNumber = 1;currentNumber<=number;currentNumber++){
+            int firstDivisorCount = countDivisors(currentNumber);
+            int secondDivisorCount = countDivisors(currentNumber+1);
+            if(firstDivisorCount==secondDivisorCount){
                 count++;
             }
         }
@@ -29,8 +29,8 @@ public class DivisorCounter {
             throw new IllegalArgumentException("Input must be a positive integer");
         }
         int result = 0;
-        for (int i = 1; i < number; i++) {
-            if (isDivisor(number,i)) {
+        for (int divisor = 1; divisor < number; divisor++) {
+            if (isDivisor(number,divisor)) {
                 result++;
             }
         }
