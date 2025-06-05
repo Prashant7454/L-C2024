@@ -21,17 +21,17 @@ public class DivisorCounterTest {
     }
 
     @Test
-    public void testCountMatchingDivisors_Sample() {
+    public void testGetCountOfSameNumberOfPositiveDivisor_Sample() {
         assertEquals(2, divisorCounter.getCountOfSameNumberOfPositiveDivisor(15));
     }
 
     @Test
-    public void testCountMatchingDivisors_One() {
+    public void testGetCountOfSameNumberOfPositiveDivisor_One() {
         assertEquals(0, divisorCounter.getCountOfSameNumberOfPositiveDivisor(1));
     }
 
     @Test
-    public void testCountMatchingDivisors_InvalidInput() {
+    public void testGetCountOfSameNumberOfPositiveDivisor_InvalidInput() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> divisorCounter.getCountOfSameNumberOfPositiveDivisor(-5));
         assertEquals("Input must be a positive integer", exception.getMessage());
     }
